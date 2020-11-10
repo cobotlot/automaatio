@@ -43,12 +43,12 @@ function addDocument(onAdded){
 }
 
 function createConnection(onCreate){
-    MongoClient.connect('mongodb://cobotlot:jhsdfyu@cluster0-shard-00-00.qlayi.mongodb.net:27017,cluster0-shard-00-01.qlayi.mongodb.net:27017,cluster0-shard-00-02.qlayi.mongodb.net:27017/automaatio?ssl=true&replicaSet=atlas-9b040q-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, client_m) {
-        db = client_m.db('automaatio'); // DB name
+    MongoClient.connect('mongodb://cobotlot:jhsdfyu@cluster0-shard-00-00.qlayi.mongodb.net:27017,cluster0-shard-00-01.qlayi.mongodb.net:27017,cluster0-shard-00-02.qlayi.mongodb.net:27017/automaatio2?ssl=true&replicaSet=atlas-9b040q-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, client_m) {
+        db = client_m.db('automaatio2'); // DB name
 					if(err)
             throw err;
         console.log("connected to the mongoDB !");
-        myCollection = db.collection('automaatio'); //Collection name
+        myCollection = db.collection('automaatio2'); //Collection name
         onCreate();
 	    client_m.close();
     });
