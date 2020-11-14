@@ -48,7 +48,7 @@ function createConnection(onCreate){
 					if(err)
             throw err;
         console.log("connected to the mongoDB !");
-        myCollection = db.collection('automaatio2'); //Collection name
+        myCollection = db.collection('automaatio'); //Collection name
         onCreate();
 	    client_m.close();
     });
